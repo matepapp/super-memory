@@ -9,12 +9,6 @@ import { takeUntil, filter } from 'rxjs/operators';
 import { AnimationsService, routeAnimations} from '@app/core';
 import { environment as env } from '@env/environment';
 
-import {
-  NIGHT_MODE_THEME,
-  selectorSettings,
-  SettingsState,
-} from '@app/settings';
-
 @Component({
   selector: 'super-memory-root',
   templateUrl: './app.component.html',
@@ -52,43 +46,11 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.subscribeToRouterEvents();
-    this.subscribeToSettings();
   }
 
   ngOnDestroy(): void {
     this.unsubscribe$.next();
     this.unsubscribe$.complete();
-  }
-
-  private subscribeToSettings() {
-    this.store
-      .select(selectorSettings)
-      .pipe(takeUntil(this.unsubscribe$))
-      .subscribe(settings => {
-        this.setTheme(settings);
-        this.animationService.updateRouteAnimationType(
-          settings.pageAnimations,
-          settings.elementsAnimations
-        );
-      });
-  }
-
-  private setTheme(settings: SettingsState) {
-    const { theme, autoNightMode } = settings;
-    const hours = new Date().getHours();
-    const effectiveTheme = (autoNightMode && (hours >= 20 || hours <= 6)
-      ? NIGHT_MODE_THEME
-      : theme
-    ).toLowerCase();
-    this.componentCssClass = effectiveTheme;
-    const classList = this.overlayContainer.getContainerElement().classList;
-    const toRemove = Array.from(classList).filter((item: string) =>
-      item.includes('-theme')
-    );
-    if (toRemove.length) {
-      classList.remove(...toRemove);
-    }
-    classList.add(effectiveTheme);
   }
 
   private subscribeToRouterEvents() {
