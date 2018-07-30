@@ -1,9 +1,0 @@
-$super-memory-nature-primary: mat-palette($mat-brown, 700, 300, 900);
-$super-memory-nature-accent: mat-palette($mat-deep-purple, 300);
-$super-memory-nature-warn: mat-palette($mat-red, 600);
-
-$super-memory-nature-theme: mat-light-theme(
-  $super-memory-nature-primary,
-  $super-memory-nature-accent,
-  $super-memory-nature-warn
-);

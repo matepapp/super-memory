@@ -1,9 +1,0 @@
-$super-memory-black-primary: mat-palette($mat-grey, 700, 300, 900);
-$super-memory-black-accent: mat-palette($mat-blue-grey, 400);
-$super-memory-black-warn: mat-palette($mat-red, 500);
-
-$super-memory-black-theme: mat-dark-theme(
-  $super-memory-black-primary,
-  $super-memory-black-accent,
-  $super-memory-black-warn
-);

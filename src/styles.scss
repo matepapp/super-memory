@@ -12,10 +12,7 @@
 
 @include mat-core();
 
-@import 'themes/default-theme.scss';
-@import 'themes/light-theme.scss';
-@import 'themes/black-theme.scss';
-@import 'themes/nature-theme.scss';
+@import './default-theme.scss';
 
 @import 'styles-reset.scss-theme';
 @import 'app/app.component.scss-theme';
@@ -42,19 +39,4 @@
 .default-theme {
   @include angular-material-theme($super-memory-theme);
   @include custom-components-theme($super-memory-theme);
-}
-
-.light-theme {
-  @include angular-material-theme($super-memory-light-theme);
-  @include custom-components-theme($super-memory-light-theme);
-}
-
-.black-theme {
-  @include angular-material-theme($super-memory-black-theme);
-  @include custom-components-theme($super-memory-black-theme);
-}
-
-.nature-theme {
-  @include angular-material-theme($super-memory-nature-theme);
-  @include custom-components-theme($super-memory-nature-theme);
 }
