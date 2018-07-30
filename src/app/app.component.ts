@@ -38,7 +38,7 @@ export class AppComponent implements OnInit, OnDestroy {
   envName = env.envName;
   version = env.versions.app;
   year = new Date().getFullYear();
-  logo = require('../assets/logo.png');
+  logo = require('../assets/logo.svg');
   navigation = [
     { link: 'about', label: 'About' },
     { link: 'features', label: 'Features' },
