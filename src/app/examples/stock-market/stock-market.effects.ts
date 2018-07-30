@@ -1,3 +1,4 @@
+
 import { Injectable } from '@angular/core';
 import { Action } from '@ngrx/store';
 import { Actions, Effect } from '@ngrx/effects';
@@ -19,8 +20,8 @@ import {
   ActionStockMarketRetrieveSuccess,
   STOCK_MARKET_KEY,
   StockMarketActionTypes
-} from './stock-market.reducer';
-import { StockMarketService } from './stock-market.service';
+} from '@app/examples/stock-market/stock-market.reducer';
+import { StockMarketService } from '@app/examples/stock-market/stock-market.service';
 
 @Injectable()
 export class StockMarketEffects {

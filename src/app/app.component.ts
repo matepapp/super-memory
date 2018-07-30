@@ -21,10 +21,10 @@ import {
   selectorSettings,
   SettingsState,
   ActionSettingsChangeAnimationsPageDisabled
-} from './settings';
+} from '@app/settings';
 
 @Component({
-  selector: 'anms-root',
+  selector: 'super-memory-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   animations: [routeAnimations]

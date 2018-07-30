@@ -1,4 +1,4 @@
-# Angular, NgRx and Angular Material Starter 
+# Angular, NgRx and Angular Material Starter
 by [@tomastrajan](https://twitter.com/tomastrajan)
 
 [![license](https://img.shields.io/github/license/tomastrajan/angular-ngrx-material-starter.svg)](https://github.com/tomastrajan/angular-ngrx-material-starter/blob/master/LICENSE) [![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier) [![Build Status](https://travis-ci.org/tomastrajan/angular-ngrx-material-starter.svg?branch=master)](https://travis-ci.org/tomastrajan/angular-ngrx-material-starter) [![Twitter Follow](https://img.shields.io/twitter/follow/tomastrajan.svg?style=social&label=Follow)](https://twitter.com/tomastrajan)
@@ -35,14 +35,14 @@ npm start
   * `npm run test` - runs lint and tests
   * `npm run watch` - runs tests in watch mode
   * `npm run prod` - runs full prod build and serves prod bundle
-  * `npm run prettier` - runs prettier to format whole code base (`.ts` and `.scss`) 
-  * `npm run analyze` - runs full prod build and `webpack-bundle-analyzer` to visualize how much code is shipped (dependencies & application) 
+  * `npm run prettier` - runs prettier to format whole code base (`.ts` and `.scss`)
+  * `npm run analyze` - runs full prod build and `webpack-bundle-analyzer` to visualize how much code is shipped (dependencies & application)
 
 
 ## Make It Your Own
 When using this starter project to build your own app you might consider some of the following steps:
-  
-  * use `search and replace` functionality of your favourite IDE to replace `anms` with `<your-app-prefix>`
+
+  * use `search and replace` functionality of your favourite IDE to replace `super-memory` with `<your-app-prefix>`
   * rename project in `package.json` `name` property and set appropriate version (eg `0.0.0` or `1.0.0`)
   * rename app in `src/environments/` files (will be shown in browser tab)
   * delete pre-existing `CHANGELOG.md` (you will generate your own with future releases of your features)
@@ -51,15 +51,15 @@ When using this starter project to build your own app you might consider some of
   * replace logo in `src/assets` folder ( currently 128 x 128 pixel `png` file )
   * adjust colors in `src/themes/default-theme.scss`
   * create a pull request in the [original repository](https://github.com/tomastrajan/angular-ngrx-material-starter/) to update `BUILT_WITH.md` [file](https://github.com/tomastrajan/angular-ngrx-material-starter/blob/master/BUILT_WITH.md) with a link and short description of your project
-  
+
 #### Continuous Integration
 Starter project is using [Travis CI](https://travis-ci.org/) for running linters and tests on every commit.
 Based on your preferences and needs you can either:
 
   * not use / use other CI server and delete both `.travis.yml` and `.travis-deploy.sh`
-  * create Travis CI account and link it to your projects Github repo and [configure build](https://medium.com/@tomastrajan/continuous-deployment-of-client-side-apps-with-github-pages-travis-ci-10e9d641a889) 
+  * create Travis CI account and link it to your projects Github repo and [configure build](https://medium.com/@tomastrajan/continuous-deployment-of-client-side-apps-with-github-pages-travis-ci-10e9d641a889)
     with `GH_REF` and `GH_TOKEN` environment variables for automatic deployment of releases to Github Pages
-  
+
 
 ## Learning Materials
 Articles with content that explains various approaches used to build this starter project.
@@ -70,14 +70,14 @@ Articles with content that explains various approaches used to build this starte
   * [Blog post about configuration of animations during runtime](https://medium.com/tomastrajan/total-guide-to-dynamic-angular-animations-that-can-be-toggled-at-runtime-be5bb6778a0a)
   * [Blog post about unit testing of components with NgRx TestStore](https://medium.com/@tomastrajan/how-to-unit-test-angular-components-with-fake-ngrx-teststore-f0500cc5fc26)
 
-#### Theming 
+#### Theming
 
   * [Blog post](https://medium.com/@tomastrajan/the-complete-guide-to-angular-material-themes-4d165a9d24d1)
   * [Presentation (Slides)](http://slides.com/tomastrajan/angular-material-themes-guide#/)
   * [Live coding Video Tutorial](https://www.youtube.com/watch?v=PsgZjFTAleI)
   * [Meetup Presentation & Live coding Video](https://www.youtube.com/watch?v=7auj9RfCNrE)
 
- 
+
 ## Features
 
 * custom themes support (3 themes included)
@@ -87,7 +87,7 @@ Articles with content that explains various approaches used to build this starte
 * `@ngrx/effects` for API requests
 * fully responsive design
 * angular-material and custom components in `SharedModule`
- 
+
 ## Stack
 
 * Angular
@@ -100,7 +100,7 @@ Articles with content that explains various approaches used to build this starte
 * **Blocking at emitting LicenseWebpackPlugin when npm start** - try using [cnpm](https://github.com/cnpm/cnpm) instead of npm
 
 ## Contributors
-Want to start contributing to open source with Angular? 
+Want to start contributing to open source with Angular?
 
 Leave your mark and join the growing team of contributors!
 

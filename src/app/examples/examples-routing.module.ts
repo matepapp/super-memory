@@ -1,13 +1,15 @@
+
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AuthGuardService } from '@app/core';
 
-import { ExamplesComponent } from './examples/examples.component';
-import { TodosComponent } from './todos/todos.component';
-import { StockMarketComponent } from './stock-market/stock-market.component';
-import { ParentComponent } from './theming/parent/parent.component';
-import { AuthenticatedComponent } from './authenticated/authenticated.component';
+import { ExamplesComponent } from '@app/examples/examples/examples.component';
+import { TodosComponent } from '@app/examples/todos/todos.component';
+import { StockMarketComponent } from '@app/examples/stock-market/stock-market.component';
+import { ParentComponent } from '@app/examples/theming/parent/parent.component';
+import { AuthenticatedComponent } from '@app/examples/authenticated/authenticated.component';
 
 const routes: Routes = [
   {

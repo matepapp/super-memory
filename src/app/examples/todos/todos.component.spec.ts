@@ -11,14 +11,14 @@ import { Store } from '@ngrx/store';
 import { SharedModule } from '@app/shared';
 import { TestStore } from '@testing/utils';
 
-import { TodosComponent } from './todos.component';
+import { TodosComponent } from '@app/examples/todos/todos.component';
 import {
   ActionTodosAdd,
   ActionTodosFilter,
   ActionTodosToggle,
   ActionTodosRemoveDone,
   TodosState
-} from './todos.reducer';
+} from '@app/examples/todos/todos.reducer';
 
 describe('TodosComponent', () => {
   let component: TodosComponent;
@@ -29,7 +29,7 @@ describe('TodosComponent', () => {
   const getTodos = () => fixture.debugElement.queryAll(By.css('.todo'));
 
   const getBigInput = () =>
-    fixture.debugElement.query(By.css('anms-big-input'));
+    fixture.debugElement.query(By.css('super-memory-big-input'));
 
   const getBigInputValue = () =>
     getBigInput().query(By.css('input')).nativeElement.value;
@@ -43,11 +43,11 @@ describe('TodosComponent', () => {
 
   const deleteDoneTodosBtn = () =>
     fixture.debugElement.query(
-      By.css('anms-big-input-action[fontIcon="fa-trash"] > button')
+      By.css('super-memory-big-input-action[fontIcon="fa-trash"] > button')
     );
   const addTodoBtn = () =>
     fixture.debugElement.query(
-      By.css('anms-big-input-action[fontIcon="fa-plus"] > button')
+      By.css('super-memory-big-input-action[fontIcon="fa-plus"] > button')
     );
 
   beforeEach(

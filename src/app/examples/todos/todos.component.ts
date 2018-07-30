@@ -16,10 +16,10 @@ import {
   Todo,
   TodosFilter,
   TodosState
-} from './todos.reducer';
+} from '@app/examples/todos/todos.reducer';
 
 @Component({
-  selector: 'anms-todos',
+  selector: 'super-memory-todos',
   templateUrl: './todos.component.html',
   styleUrls: ['./todos.component.scss']
 })

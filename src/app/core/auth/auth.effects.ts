@@ -5,9 +5,9 @@ import { Actions, Effect } from '@ngrx/effects';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
-import { LocalStorageService } from '../local-storage/local-storage.service';
+import { LocalStorageService } from '@app/core/local-storage/local-storage.service';
 
-import { AUTH_KEY, AuthActionTypes } from './auth.reducer';
+import { AUTH_KEY, AuthActionTypes } from '@app/core/auth/auth.reducer';
 
 @Injectable()
 export class AuthEffects {

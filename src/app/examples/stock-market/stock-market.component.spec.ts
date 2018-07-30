@@ -5,9 +5,9 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { CoreModule } from '@app/core';
 import { SharedModule } from '@app/shared';
 
-import { ExamplesModule } from '../examples.module';
+import { ExamplesModule } from '@app/examples/examples.module';
 
-import { StockMarketComponent } from './stock-market.component';
+import { StockMarketComponent } from '@app/examples/stock-market/stock-market.component';
 
 describe('StockMarketComponent', () => {
   let component: StockMarketComponent;

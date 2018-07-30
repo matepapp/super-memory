@@ -5,7 +5,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from '@app/shared';
 import { CoreModule } from '@app/core';
 
-import { ExamplesComponent } from './examples.component';
+import { ExamplesComponent } from '@app/examples/examples/examples.component';
 
 describe('ExamplesComponent', () => {
   let component: ExamplesComponent;

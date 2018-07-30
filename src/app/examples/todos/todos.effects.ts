@@ -1,3 +1,4 @@
+
 import { Injectable } from '@angular/core';
 import { Action } from '@ngrx/store';
 import { Actions, Effect } from '@ngrx/effects';
@@ -10,7 +11,7 @@ import {
   ActionTodosPersist,
   TODOS_KEY,
   TodosActionTypes
-} from './todos.reducer';
+} from '@app/examples/todos/todos.reducer';
 
 @Injectable()
 export class TodosEffects {

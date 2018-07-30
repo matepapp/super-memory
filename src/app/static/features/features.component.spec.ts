@@ -4,7 +4,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { SharedModule } from '@app/shared';
 import { CoreModule } from '@app/core';
 
-import { FeaturesComponent } from './features.component';
+import { FeaturesComponent } from '@app/static/features/features.component';
 
 describe('FeaturesComponent', () => {
   let component: FeaturesComponent;

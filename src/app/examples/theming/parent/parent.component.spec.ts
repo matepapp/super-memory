@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ParentComponent } from './parent.component';
-import { ChildComponent } from '../child/child.component';
+import { ParentComponent } from '@app/examples/theming/parent/parent.component';
+import { ChildComponent } from '@app/examples/theming/child/child.component';
 
 describe('ParentComponent', () => {
   let component: ParentComponent;

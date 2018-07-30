@@ -11,10 +11,10 @@ import {
   ActionSettingsChangeAnimationsElements,
   SettingsState,
   ActionSettingsPersist
-} from '../settings.reducer';
+} from '@app/settings/settings.reducer';
 
 @Component({
-  selector: 'anms-settings',
+  selector: 'super-memory-settings',
   templateUrl: './settings.component.html',
   styleUrls: ['./settings.component.scss']
 })

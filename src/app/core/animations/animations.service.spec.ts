@@ -1,6 +1,7 @@
+
 import { TestBed, inject } from '@angular/core/testing';
 
-import { AnimationsService } from './animations.service';
+import { AnimationsService } from '@app/core/animations/animations.service';
 
 describe('AnimationsService', () => {
   beforeEach(() => {

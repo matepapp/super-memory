@@ -5,11 +5,11 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from '@app/shared';
 import { CoreModule } from '@app/core';
 
-import { SettingsModule } from './settings';
-import { StaticModule } from './static';
+import { SettingsModule } from '@app/settings';
+import { StaticModule } from '@app/static';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppRoutingModule } from '@app/app-routing.module';
+import { AppComponent } from '@app/app.component';
 
 @NgModule({
   imports: [

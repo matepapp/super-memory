@@ -1,9 +1,9 @@
-$anms-light-primary: mat-palette($mat-grey, 200, 500, 300);
-$anms-light-accent: mat-palette($mat-brown, 200);
-$anms-light-warn: mat-palette($mat-deep-orange, 200);
+$super-memory-light-primary: mat-palette($mat-grey, 200, 500, 300);
+$super-memory-light-accent: mat-palette($mat-brown, 200);
+$super-memory-light-warn: mat-palette($mat-deep-orange, 200);
 
-$anms-light-theme: mat-light-theme(
-  $anms-light-primary,
-  $anms-light-accent,
-  $anms-light-warn
+$super-memory-light-theme: mat-light-theme(
+  $super-memory-light-primary,
+  $super-memory-light-accent,
+  $super-memory-light-warn
 );
