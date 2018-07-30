@@ -19,9 +19,6 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
-import { BigInputComponent } from '@app/shared/big-input/big-input.component';
-import { BigInputActionComponent } from '@app/shared/big-input/big-input-action.component';
-
 @NgModule({
   imports: [
     CommonModule,
@@ -44,7 +41,7 @@ import { BigInputActionComponent } from '@app/shared/big-input/big-input-action.
     MatSnackBarModule,
     MatSlideToggleModule
   ],
-  declarations: [BigInputComponent, BigInputActionComponent],
+  declarations: [],
   exports: [
     CommonModule,
     FormsModule,
@@ -65,9 +62,6 @@ import { BigInputActionComponent } from '@app/shared/big-input/big-input-action.
     MatTooltipModule,
     MatSnackBarModule,
     MatSlideToggleModule,
-
-    BigInputComponent,
-    BigInputActionComponent
   ]
 })
 export class SharedModule {}
