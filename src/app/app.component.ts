@@ -1,4 +1,3 @@
-import browser from 'browser-detect';
 import { Title } from '@angular/platform-browser';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { Component, HostBinding, OnDestroy, OnInit } from '@angular/core';
@@ -7,20 +6,13 @@ import { Store } from '@ngrx/store';
 import { Subject } from 'rxjs';
 import { takeUntil, filter } from 'rxjs/operators';
 
-import {
-  ActionAuthLogin,
-  ActionAuthLogout,
-  AnimationsService,
-  selectorAuth,
-  routeAnimations
-} from '@app/core';
+import { AnimationsService, routeAnimations} from '@app/core';
 import { environment as env } from '@env/environment';
 
 import {
   NIGHT_MODE_THEME,
   selectorSettings,
   SettingsState,
-  ActionSettingsChangeAnimationsPageDisabled
 } from '@app/settings';
 
 @Component({
@@ -39,16 +31,16 @@ export class AppComponent implements OnInit, OnDestroy {
   version = env.versions.app;
   year = new Date().getFullYear();
   logo = require('../assets/logo.svg');
+  title = 'SUPER MEMORY GAME';
+
   navigation = [
-    { link: 'about', label: 'About' },
-    { link: 'features', label: 'Features' },
-    { link: 'examples', label: 'Examples' }
+    { link: 'high-scores', label: 'High Scores' },
+    { link: 'play', label: 'Start New Game' },
   ];
+
   navigationSideMenu = [
     ...this.navigation,
-    { link: 'settings', label: 'Settings' }
   ];
-  isAuthenticated;
 
   constructor(
     public overlayContainer: OverlayContainer,
@@ -58,19 +50,9 @@ export class AppComponent implements OnInit, OnDestroy {
     private animationService: AnimationsService
   ) {}
 
-  private static trackPageView(event: NavigationEnd) {
-    (<any>window).ga('set', 'page', event.urlAfterRedirects);
-    (<any>window).ga('send', 'pageview');
-  }
-
-  private static isIEorEdge() {
-    return ['ie', 'edge'].includes(browser().name);
-  }
-
   ngOnInit(): void {
-    this.subscribeToSettings();
-    this.subscribeToIsAuthenticated();
     this.subscribeToRouterEvents();
+    this.subscribeToSettings();
   }
 
   ngOnDestroy(): void {
@@ -78,29 +60,7 @@ export class AppComponent implements OnInit, OnDestroy {
     this.unsubscribe$.complete();
   }
 
-  onLoginClick() {
-    this.store.dispatch(new ActionAuthLogin());
-  }
-
-  onLogoutClick() {
-    this.store.dispatch(new ActionAuthLogout());
-  }
-
-  private subscribeToIsAuthenticated() {
-    this.store
-      .select(selectorAuth)
-      .pipe(takeUntil(this.unsubscribe$))
-      .subscribe(auth => (this.isAuthenticated = auth.isAuthenticated));
-  }
-
   private subscribeToSettings() {
-    if (AppComponent.isIEorEdge()) {
-      this.store.dispatch(
-        new ActionSettingsChangeAnimationsPageDisabled({
-          pageAnimationsDisabled: true
-        })
-      );
-    }
     this.store
       .select(selectorSettings)
       .pipe(takeUntil(this.unsubscribe$))
@@ -143,10 +103,6 @@ export class AppComponent implements OnInit, OnDestroy {
       .subscribe(event => {
         if (event instanceof ActivationEnd) {
           this.setPageTitle(event);
-        }
-
-        if (event instanceof NavigationEnd) {
-          AppComponent.trackPageView(event);
         }
       });
   }
