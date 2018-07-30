@@ -1,0 +1,4 @@
+$super-memory-primary: mat-palette($mat-grey, 900, 300, 900);
+$super-memory-accent: mat-palette($mat-deep-orange, A400);
+
+$super-memory-theme: mat-light-theme($super-memory-primary, $super-memory-accent);
