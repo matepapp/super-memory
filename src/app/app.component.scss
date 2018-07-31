@@ -3,6 +3,7 @@
 mat-sidenav-container {
   height: 100%;
   width: 100%;
+  background: url(../assets/logo.svg);
 
   .toolbar {
     position: fixed;
@@ -64,78 +65,7 @@ mat-sidenav-container {
 
     .content {
       position: relative;
-      flex: 1 0 auto;
-    }
-
-    .footer {
-      flex: 0 0 auto;
-      padding: 0 15px;
-      text-align: center;
-
-      .row {
-        padding: 10px 0;
-
-        .links {
-          a {
-            transition: padding 0.5s;
-            display: inline-block;
-            padding: 20px 5px;
-
-            &:hover {
-              text-decoration: none;
-            }
-
-            mat-icon {
-              font-size: 30px;
-              width: 35px;
-            }
-
-            span {
-              display: inline-block;
-              width: 75px;
-              padding: 0 0 0 3px;
-              overflow: hidden;
-              text-align: left;
-              white-space: nowrap;
-              transition: width 0.5s;
-            }
-          }
-
-          @media (min-width: map-get($grid-breakpoints, lg)) {
-            a {
-              padding: 20px 10px;
-            }
-          }
-
-          @media (max-width: map-get($grid-breakpoints, md)) {
-            a {
-              padding: 20px;
-
-              span {
-                width: 0;
-                padding: 0;
-              }
-            }
-          }
-
-          @media (max-width: map-get($grid-breakpoints, sm)) {
-            a {
-              padding: 20px 5px;
-            }
-          }
-        }
-
-        @media (min-width: map-get($grid-breakpoints, sm)) {
-          .signature {
-            position: relative;
-
-            a {
-              position: absolute;
-              right: 15px;
-            }
-          }
-        }
-      }
+      flex: 1 1 auto;
     }
   }
 

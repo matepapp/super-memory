@@ -8,6 +8,7 @@ import { CoreModule } from '@app/core';
 import { AppRoutingModule } from '@app/app-routing.module';
 import { AppComponent } from '@app/app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { DeckSelectorComponent } from './deck-selector/deck-selector.component';
 
 @NgModule({
   imports: [
@@ -22,7 +23,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
     // app
     AppRoutingModule
   ],
-  declarations: [AppComponent, WelcomeComponent],
+  declarations: [AppComponent, WelcomeComponent, DeckSelectorComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
