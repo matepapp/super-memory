@@ -18,24 +18,6 @@ import { environment as env } from '@env/environment';
 export class AppComponent implements OnInit, OnDestroy {
   private unsubscribe$: Subject<void> = new Subject<void>();
 
-  @HostBinding('class') componentCssClass;
-
-  isProd = env.production;
-  envName = env.envName;
-  version = env.versions.app;
-  year = new Date().getFullYear();
-  logo = require('../assets/logo.svg');
-  title = 'SUPER MEMORY GAME';
-
-  navigation = [
-    { link: 'high-scores', label: 'High Scores' },
-    { link: 'play', label: 'Start New Game' },
-  ];
-
-  navigationSideMenu = [
-    ...this.navigation,
-  ];
-
   constructor(
     public overlayContainer: OverlayContainer,
     private store: Store<any>,

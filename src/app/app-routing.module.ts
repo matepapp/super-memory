@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from '@app/welcome/welcome.component';
+import { GameContainerComponent } from '@app/game-container/game-container.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,13 @@ const routes: Routes = [
     component: WelcomeComponent,
     data: {
       title: 'Welcome'
+    }
+  },
+  {
+    path: 'game',
+    component: GameContainerComponent,
+    data: {
+      title: 'Game'
     }
   },
   {

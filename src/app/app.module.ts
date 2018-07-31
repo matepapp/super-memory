@@ -9,6 +9,8 @@ import { AppRoutingModule } from '@app/app-routing.module';
 import { AppComponent } from '@app/app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { DeckSelectorComponent } from './deck-selector/deck-selector.component';
+import { GameContainerComponent } from './game-container/game-container.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @NgModule({
   imports: [
@@ -23,7 +25,7 @@ import { DeckSelectorComponent } from './deck-selector/deck-selector.component';
     // app
     AppRoutingModule
   ],
-  declarations: [AppComponent, WelcomeComponent, DeckSelectorComponent],
+  declarations: [AppComponent, WelcomeComponent, DeckSelectorComponent, GameContainerComponent, ToolbarComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
