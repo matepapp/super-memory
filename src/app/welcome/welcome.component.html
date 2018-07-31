@@ -1,0 +1,18 @@
+<div>
+  <div>
+    SUPERCHARGE
+  </div>
+  <div>
+    MEMORY GAME
+  </div>
+
+  <mat-form-field>
+    <mat-select placeholder="Deck size">
+      <mat-option *ngFor="let deckSize of deckSizes" [value]="deckSize">
+        {{ deckSize }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-flat-button color="accent">START NEW GAME</button>
+</div>

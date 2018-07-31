@@ -1,11 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { WelcomeComponent } from '@app/welcome/welcome.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/',
+    redirectTo: 'welcome',
     pathMatch: 'full'
+  },
+  {
+    path: 'welcome',
+    component: WelcomeComponent,
+    data: {
+      title: 'Welcome'
+    }
   },
   {
     path: '**',
