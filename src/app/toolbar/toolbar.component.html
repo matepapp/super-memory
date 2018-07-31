@@ -21,11 +21,11 @@
     <span routerLink="" class="branding spacer d-none d-md-inline"><img
       [src]="logo"/>{{ title }}</span>
 
-    <div class="spacer d-none d-md-inline d-sm-none">
+    <div *ngIf="!(compact$ | async)" class="spacer d-none d-md-inline d-sm-none">
       <super-memory-deck-selector direction="row"></super-memory-deck-selector>
     </div>
 
-    <div class="d-none d-md-inline d-sm-none">
+    <div *ngIf="!(compact$ | async)" class="d-none d-md-inline d-sm-none">
       <a mat-button routerLink="/high-scores">HIGH SCORES</a>
     </div>
   </mat-toolbar>

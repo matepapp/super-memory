@@ -4,7 +4,6 @@ import { WelcomeComponent } from '@app/welcome/welcome.component';
 import { GameContainerComponent } from '@app/game-container/game-container.component';
 import { HighScoresComponent } from '@app/high-scores/high-scores.component';
 
-
 const routes: Routes = [
   {
     path: '',

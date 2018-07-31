@@ -46,6 +46,7 @@ export class AppComponent implements OnInit, OnDestroy {
       )
       .subscribe(event => {
         if (event instanceof ActivationEnd) {
+          console.log(event);
           this.setPageTitle(event);
         }
       });
