@@ -11,6 +11,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { DeckSelectorComponent } from './deck-selector/deck-selector.component';
 import { GameContainerComponent } from './game-container/game-container.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { HighScoresComponent } from './high-scores/high-scores.component';
 
 @NgModule({
   imports: [
@@ -25,7 +26,14 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     // app
     AppRoutingModule
   ],
-  declarations: [AppComponent, WelcomeComponent, DeckSelectorComponent, GameContainerComponent, ToolbarComponent],
+  declarations: [
+    AppComponent,
+    WelcomeComponent,
+    DeckSelectorComponent,
+    GameContainerComponent,
+    ToolbarComponent,
+    HighScoresComponent
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
